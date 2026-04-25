@@ -48,7 +48,7 @@ export default function Contact() {
             </h2>
 
             <p className="mt-8 text-cream/70 leading-relaxed font-light text-lg max-w-md">
-              Salon, lancement, roadshow, showroom — toutes les conversations
+              Salon, lancement, roadshow, showroom, toutes les conversations
               commencent par un brief. Envoyez-nous le vôtre.
             </p>
 
@@ -79,7 +79,7 @@ export default function Contact() {
                 <p className="text-[10px] uppercase tracking-widest text-cream/40 mb-1">
                   Direction
                 </p>
-                <p className="text-cream">Nicolas Revel — Fondateur</p>
+                <p className="text-cream">Nicolas Revel, Fondateur</p>
               </div>
             </div>
           </div>

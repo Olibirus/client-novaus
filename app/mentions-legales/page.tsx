@@ -52,7 +52,7 @@ export default function Page() {
               >
                 Olibrius
               </a>{" "}
-              — agence digitale.
+              (agence digitale).
             </p>
           </Block>
 

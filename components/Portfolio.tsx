@@ -13,7 +13,7 @@ type Project = {
 const projects: Project[] = [
   // Novaus projects (recent)
   { src: "/assets/naya-1.png", title: "Naya", meta: "Stand sur-mesure · 9m²", category: "novaus" },
-  { src: "/assets/naya-sfrms.png", title: "Naya — SFRMS", meta: "Stand modulaire · Salon médical", category: "novaus" },
+  { src: "/assets/naya-sfrms.png", title: "Naya, SFRMS", meta: "Stand modulaire · Salon médical", category: "novaus" },
   { src: "/assets/seriderm-1.png", title: "Sériderm", meta: "Stand cosmétique professionnel", category: "novaus" },
   { src: "/assets/seriderm-2.png", title: "Sériderm", meta: "Vue de détail", category: "novaus" },
   { src: "/assets/seriderm-3.png", title: "Sériderm", meta: "Espace accueil", category: "novaus" },
@@ -96,7 +96,7 @@ export default function Portfolio() {
           <p className="text-sm text-cream/50 max-w-2xl mb-10 leading-relaxed">
             Une sélection de projets conçus et pilotés par Nicolas Revel,
             fondateur de Novaus, au cours de ses 15 années d'expérience dans le
-            design d'espaces événementiels — pour des marques telles que Valeo,
+            design d'espaces événementiels, pour des marques telles que Valeo,
             JVC, Sagemcom, NH Industries, Bragard, PAUL, AREFIM, Elanco, Smar+,
             Citel et bien d'autres.
           </p>

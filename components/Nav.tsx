@@ -10,7 +10,6 @@ const links = [
   { href: "#espaces", label: "Espaces" },
   { href: "#engagement", label: "Engagement" },
   { href: "#realisations", label: "Réalisations" },
-  { href: "#contact", label: "Contact" },
 ];
 
 export default function Nav({ variant = "home" }: { variant?: "home" | "page" }) {
@@ -38,7 +37,7 @@ export default function Nav({ variant = "home" }: { variant?: "home" | "page" })
         <Link
           href="/"
           className="flex items-center gap-3 group"
-          aria-label="Novaus — accueil"
+          aria-label="Novaus, accueil"
         >
           <img
             src="/assets/logo.png"

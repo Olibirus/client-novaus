@@ -1,4 +1,5 @@
 import SectionHeader from "./SectionHeader";
+import ImagePlaceholder from "./ImagePlaceholder";
 
 export default function Story() {
   return (
@@ -15,40 +16,45 @@ export default function Story() {
           invert
         />
 
-        <div className="grid grid-cols-12 gap-6 lg:gap-12">
-          <div className="col-span-12 lg:col-span-5 lg:col-start-4">
+        {/* Two clean columns: text left, image right */}
+        <div className="grid grid-cols-12 gap-8 lg:gap-16 items-start">
+          <div className="col-span-12 lg:col-span-6 lg:col-start-1 space-y-8">
             <p className="text-ink/80 text-lg lg:text-xl leading-relaxed font-light">
               Il y a des entreprises qui naissent d'un métier. Et d'autres,
-              plus rares, qui naissent d'une vision.
-            </p>
-            <p className="mt-6 text-ink/80 text-lg lg:text-xl leading-relaxed font-light">
-              <span className="font-medium">Novaus appartient</span> à cette
+              plus rares, qui naissent d'une vision. Novaus appartient à cette
               seconde catégorie.
             </p>
-          </div>
-
-          <div className="col-span-12 lg:col-span-4">
-            <p className="text-ink/70 text-base leading-relaxed">
-              Novaus est né d'un constat simple : dans un monde saturé d'images,
-              de messages et de signaux, ce qui manque n'est pas l'information…
-              <span className="block mt-4 text-ink font-display italic text-2xl lg:text-3xl text-bronze">
-                c'est l'expérience.
-              </span>
+            <p className="text-ink/70 text-base lg:text-lg leading-relaxed">
+              Novaus est né d'un constat simple. Dans un monde saturé d'images
+              et de signaux, ce qui manque n'est pas l'information, c'est
+              l'expérience.
             </p>
-            <p className="mt-6 text-ink/60 text-sm leading-relaxed">
+            <p className="text-ink/70 text-base lg:text-lg leading-relaxed">
               Fondée par Nicolas Revel, Novaus capitalise sur plus de 15 années
               de conception et de pilotage de projets pour des marques
-              internationales — Valeo, JVC, Sagemcom, NH Industries, Delta —
-              au sein d'agences de référence du design d'espaces.
+              internationales au sein d'agences de référence.
             </p>
-          </div>
-        </div>
 
-        {/* Big quote band */}
-        <div className="mt-32 border-t border-ink/10 pt-16">
-          <p className="font-display text-[clamp(1.8rem,3.5vw,3rem)] leading-[1.15] text-ink/90 max-w-5xl">
-            « Et si un stand devenait <em className="text-bronze">autre chose</em> qu'une structure&nbsp;? Une rencontre. Un chemin. Une émotion. Un moment qui change quelque chose, même brièvement, chez celui qui le traverse. »
-          </p>
+            {/* Signature stat */}
+            <div className="pt-6 border-t border-ink/15">
+              <p className="font-display text-5xl lg:text-6xl text-bronze font-light">
+                15<span className="text-3xl lg:text-4xl">+</span>
+              </p>
+              <p className="mt-2 text-[10px] uppercase tracking-widest text-ink/50">
+                Années d'expérience capitalisées
+              </p>
+            </div>
+          </div>
+
+          <div className="col-span-12 lg:col-span-6">
+            <ImagePlaceholder
+              id="histoire-portrait"
+              ratio="aspect-[4/5]"
+              invert
+              label="Portrait éditorial du fondateur"
+              prompt="Editorial portrait, half-body, Nicolas Revel in quiet workshop or empty exhibition hall at dawn. Warm cream and bronze lighting, soft shadows, looking off-camera, hand resting on a wooden material sample. Cinematic, fashion-magazine grade, 4:5 vertical, neutral background, no logos."
+            />
+          </div>
         </div>
       </div>
     </section>

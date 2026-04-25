@@ -20,7 +20,7 @@ export default function Footer() {
               Le design comme trajectoire, l'expérience comme destination.
             </p>
             <p className="mt-6 text-[10px] uppercase tracking-widest text-cream/40">
-              Agence de design d'espaces — France & International
+              Agence de design d'espaces, France & International
             </p>
           </div>
 
@@ -37,7 +37,6 @@ export default function Footer() {
                 ["#espaces", "Espaces"],
                 ["#engagement", "Engagement"],
                 ["#realisations", "Réalisations"],
-                ["#contact", "Contact"],
               ].map(([h, l]) => (
                 <li key={h}>
                   <Link
@@ -111,7 +110,7 @@ export default function Footer() {
 
         <div className="mt-16 pt-8 border-t border-line flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
           <p className="text-xs text-cream/30">
-            © {new Date().getFullYear()} Novaus — Tous droits réservés.
+            © {new Date().getFullYear()} Novaus, Tous droits réservés.
           </p>
           <p className="text-[11px] text-cream/[0.12]">
             Développé par{" "}

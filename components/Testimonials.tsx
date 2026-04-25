@@ -1,7 +1,7 @@
 const testimonials = [
   {
     quote:
-      "Une équipe qui ne se contente pas d'exécuter — elle interroge le brief, propose, défend. Le stand a transformé notre présence salon en vraie destination.",
+      "Une équipe qui ne se contente pas d'exécuter, elle interroge le brief, propose, défend. Le stand a transformé notre présence salon en vraie destination.",
     author: "Directrice Marketing",
     company: "Industrie cosmétique",
   },
@@ -34,7 +34,7 @@ export default function Testimonials() {
           </div>
           <div className="col-span-12 lg:col-span-9">
             <h2 className="font-display font-light text-[clamp(2rem,4.5vw,4rem)] leading-[1.05] text-ink">
-              La meilleure preuve <em className="text-bronze not-italic">— c'est eux.</em>
+              La meilleure preuve <em className="text-bronze not-italic">c'est eux.</em>
             </h2>
           </div>
         </div>

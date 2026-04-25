@@ -1,35 +1,24 @@
 import SectionHeader from "./SectionHeader";
+import ImagePlaceholder from "./ImagePlaceholder";
 
 const pillars = [
-  {
-    label: "Design",
-    text: "Faire du design une promesse tenue.",
-  },
-  {
-    label: "Espace",
-    text: "Faire de l'espace une expérience.",
-  },
-  {
-    label: "Expérience",
-    text: "Faire de l'expérience un levier stratégique.",
-  },
-  {
-    label: "Ambassadeur",
-    text: "Faire de chaque visiteur un client puis un ambassadeur.",
-  },
+  { label: "Design", text: "Faire du design une promesse tenue." },
+  { label: "Espace", text: "Faire de l'espace une expérience." },
+  { label: "Expérience", text: "Faire de l'expérience un levier stratégique." },
+  { label: "Ambassadeur", text: "Faire de chaque visiteur un ambassadeur." },
 ];
 
 const values = [
-  { name: "Pragmatisme", desc: "Faire simple, juste, efficace." },
-  { name: "Responsabilité", desc: "En design, en production, en impact." },
-  { name: "Honnêteté", desc: "Transparence, clarté, fluidité des échanges." },
-  { name: "Ingéniosité", desc: "Trouver des solutions élégantes dans la contrainte." },
-  { name: "Curiosité", desc: "Explorer ce qui n'existe pas encore." },
+  "Pragmatisme",
+  "Responsabilité",
+  "Honnêteté",
+  "Ingéniosité",
+  "Curiosité",
 ];
 
 export default function Mission() {
   return (
-    <section id="mission" className="relative bg-ink py-28 lg:py-40">
+    <section id="mission" className="relative bg-ink py-28 lg:py-40 overflow-hidden">
       <div className="max-w-8xl mx-auto px-6 lg:px-12">
         <SectionHeader
           num="02"
@@ -38,64 +27,61 @@ export default function Mission() {
             <>
               Créer des expériences <em className="text-gold not-italic">construites,</em>
               <br />
-              sensibles, utiles et mémorables.
+              sensibles et mémorables.
             </>
           }
         />
 
-        {/* Four pillars */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-line mb-32">
-          {pillars.map((p, i) => (
-            <div
-              key={p.label}
-              className="bg-ink p-10 lg:p-12 group hover:bg-ink-soft transition-colors"
-            >
-              <span className="section-num text-sm">
-                0{i + 1}
-              </span>
-              <h3 className="mt-6 font-display text-3xl text-cream font-light">
-                {p.label}
-              </h3>
-              <p className="mt-4 text-cream/60 leading-relaxed">{p.text}</p>
-              <div className="mt-8 w-8 h-px bg-gold/50 group-hover:w-16 transition-all duration-500" />
-            </div>
-          ))}
-        </div>
-
-        {/* Five values */}
-        <div className="grid grid-cols-12 gap-6 lg:gap-12 items-start">
-          <div className="col-span-12 lg:col-span-3">
-            <p className="text-[10px] uppercase tracking-widest text-cream/40">
-              Cinq piliers fondateurs
-            </p>
-            <h3 className="mt-4 font-display text-3xl lg:text-4xl text-cream font-light">
-              Nos valeurs
-            </h3>
-            <p className="mt-6 text-cream/60 leading-relaxed text-sm">
-              Elles ne sont pas affichées. Elles sont incarnées : dans un volume,
-              une lumière, une circulation, une matière, un choix technique ou
-              narratif.
-            </p>
+        {/* Image left, four pillars right */}
+        <div className="grid grid-cols-12 gap-8 lg:gap-12 items-stretch">
+          <div className="col-span-12 lg:col-span-5">
+            <ImagePlaceholder
+              id="mission-detail"
+              ratio="aspect-[4/5] lg:aspect-auto lg:h-full lg:min-h-[600px]"
+              label="Détail matière, lumière, structure"
+              prompt="Close-up architectural detail of an exhibition stand corner. Brushed aluminum frame meeting warm walnut wood and a backlit translucent panel. Moody dramatic side-lighting (warm gold + cool key light), shallow depth of field, no people, no logos, vertical 4:5. Premium editorial photography, sharp on the joinery, slight haze in background."
+            />
           </div>
 
-          <div className="col-span-12 lg:col-span-9">
-            <ul className="divide-y divide-line border-y border-line">
-              {values.map((v, i) => (
-                <li
-                  key={v.name}
-                  className="grid grid-cols-12 gap-4 py-7 group hover:bg-ink-soft/30 transition-colors px-2"
+          <div className="col-span-12 lg:col-span-7">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-line h-full">
+              {pillars.map((p, i) => (
+                <div
+                  key={p.label}
+                  className="bg-ink p-10 lg:p-12 group hover:bg-ink-soft transition-colors flex flex-col justify-between min-h-[220px]"
                 >
-                  <div className="col-span-2 lg:col-span-1">
-                    <span className="section-num text-sm">0{i + 1}</span>
+                  <span className="section-num text-sm">0{i + 1}</span>
+                  <div className="mt-auto">
+                    <h3 className="font-display text-3xl lg:text-4xl text-cream font-light">
+                      {p.label}
+                    </h3>
+                    <p className="mt-3 text-cream/60 leading-relaxed text-sm">
+                      {p.text}
+                    </p>
+                    <div className="mt-6 w-8 h-px bg-gold/50 group-hover:w-16 transition-all duration-500" />
                   </div>
-                  <div className="col-span-10 lg:col-span-4">
-                    <h4 className="font-display text-xl lg:text-2xl text-cream font-light">
-                      {v.name}
-                    </h4>
-                  </div>
-                  <div className="col-span-12 lg:col-span-7">
-                    <p className="text-cream/60 leading-relaxed">{v.desc}</p>
-                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Values band (compact, single line) */}
+        <div className="mt-20 lg:mt-28 pt-10 border-t border-line">
+          <div className="flex flex-col lg:flex-row lg:items-center gap-6 lg:gap-12">
+            <p className="text-[10px] uppercase tracking-widest text-cream/40 lg:w-48 shrink-0">
+              Cinq valeurs fondatrices
+            </p>
+            <ul className="flex flex-wrap items-center gap-x-8 gap-y-3">
+              {values.map((v, i) => (
+                <li key={v} className="flex items-center gap-3">
+                  <span className="text-gold text-xs">·</span>
+                  <span className="font-display text-xl lg:text-2xl text-cream font-light">
+                    {v}
+                  </span>
+                  {i < values.length - 1 && (
+                    <span className="hidden lg:inline-block w-6 h-px bg-line ml-5" />
+                  )}
                 </li>
               ))}
             </ul>

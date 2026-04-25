@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Politique de confidentialité",
-  description: "Politique de confidentialité et gestion des données personnelles — Novaus.fr",
+  description: "Politique de confidentialité et gestion des données personnelles, Novaus.fr",
   robots: { index: false },
 };
 

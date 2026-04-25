@@ -21,21 +21,21 @@ export const cities: Record<string, CityData> = {
     name: "Paris",
     region: "Île-de-France",
     title:
-      "Stand sur-mesure Paris — Design d'espaces & scénographie de salons | Novaus",
+      "Stand sur-mesure Paris, Design d'espaces & scénographie de salons | Novaus",
     description:
       "Agence de design de stands à Paris : sur-mesure, modulaires, pop-up, showrooms. Intervention sur Viva Technology, Maison & Objet, SIAL, Paris Air Show, Salon de l'Agriculture, Foire de Paris.",
     intro:
-      "Paris concentre la plus forte densité de salons professionnels d'Europe. Porte de Versailles, Paris Expo Villepinte, Paris Nord Villepinte, Le Bourget — chaque parc accueille des événements stratégiques où votre marque se mesure à ses concurrents directs.",
+      "Paris concentre la plus forte densité de salons professionnels d'Europe. Porte de Versailles, Paris Expo Villepinte, Paris Nord Villepinte, Le Bourget, chaque parc accueille des événements stratégiques où votre marque se mesure à ses concurrents directs.",
     hook:
       "À Paris, le standard est haut. Votre stand doit l'être aussi.",
     venues: [
       {
         name: "Paris Expo Porte de Versailles",
-        desc: "8 pavillons, 220 000 m² — Maison & Objet, Foire de Paris, Salon de l'Agriculture, Salon du Cheval, MIPIM.",
+        desc: "8 pavillons, 220 000 m², Maison & Objet, Foire de Paris, Salon de l'Agriculture, Salon du Cheval, MIPIM.",
       },
       {
         name: "Paris Nord Villepinte",
-        desc: "10 halls, 246 000 m² — SIAL Paris, Bijorhca, JEC World, Equipmag, Pollutec.",
+        desc: "10 halls, 246 000 m², SIAL Paris, Bijorhca, JEC World, Equipmag, Pollutec.",
       },
       {
         name: "Paris Le Bourget",
@@ -74,21 +74,21 @@ export const cities: Record<string, CityData> = {
     name: "Lyon",
     region: "Auvergne-Rhône-Alpes",
     title:
-      "Stand & design d'espaces Lyon — Eurexpo, Sirha, Pollutec | Novaus",
+      "Stand & design d'espaces Lyon, Eurexpo, Sirha, Pollutec | Novaus",
     description:
       "Agence de design de stands à Lyon. Conception sur-mesure, modulaire et roadshow pour Eurexpo : Sirha, Pollutec, Global Industrie, Solutrans, Préventica.",
     intro:
-      "Lyon est le second pôle d'exposition de France. Eurexpo et le Centre de Congrès accueillent des salons B2B parmi les plus stratégiques du pays — particulièrement dans l'agroalimentaire, l'industrie et l'environnement.",
+      "Lyon est le second pôle d'exposition de France. Eurexpo et le Centre de Congrès accueillent des salons B2B parmi les plus stratégiques du pays, particulièrement dans l'agroalimentaire, l'industrie et l'environnement.",
     hook:
       "À Lyon, l'industrie ne pardonne pas l'à-peu-près.",
     venues: [
       {
         name: "Eurexpo Lyon",
-        desc: "140 000 m² couverts, 7 halls — Sirha, Pollutec, Global Industrie, Solutrans, Piscine Global.",
+        desc: "140 000 m² couverts, 7 halls, Sirha, Pollutec, Global Industrie, Solutrans, Piscine Global.",
       },
       {
         name: "Centre de Congrès de Lyon",
-        desc: "Cité Internationale — 24 000 m², conférences corporate et lancements premium.",
+        desc: "Cité Internationale, 24 000 m², conférences corporate et lancements premium.",
       },
       {
         name: "La Sucrière / Halle Tony Garnier",
@@ -121,17 +121,17 @@ export const cities: Record<string, CityData> = {
     name: "Marseille",
     region: "Provence-Alpes-Côte d'Azur",
     title:
-      "Stand sur-mesure Marseille — Parc Chanot, salons & événements | Novaus",
+      "Stand sur-mesure Marseille, Parc Chanot, salons & événements | Novaus",
     description:
       "Agence de design d'espaces à Marseille : stands, showrooms, pop-up et événements pour le Parc Chanot et les salons SMIC, Top Transport, Salon Méditerranéen de la Plaisance.",
     intro:
       "Porte d'entrée méditerranéenne de la France, Marseille concentre des salons régionaux à fort rayonnement et des événements maritimes uniques. Le Parc Chanot et le Palais du Pharo sont des écrins exigeants pour les marques qui veulent rayonner sur le sud et le bassin Med.",
     hook:
-      "À Marseille, le sud impose son tempo — votre stand doit suivre.",
+      "À Marseille, le sud impose son tempo, votre stand doit suivre.",
     venues: [
       {
         name: "Parc Chanot",
-        desc: "70 000 m² — Foire de Marseille, SMIC, Top Transport, Salon des Maires PACA.",
+        desc: "70 000 m², Foire de Marseille, SMIC, Top Transport, Salon des Maires PACA.",
       },
       {
         name: "Palais du Pharo",
@@ -143,7 +143,7 @@ export const cities: Record<string, CityData> = {
       },
     ],
     fairs: [
-      { name: "SMIC — Salon Méditerranéen de l'Immobilier", sector: "Immobilier", period: "Annuel · Parc Chanot" },
+      { name: "SMIC, Salon Méditerranéen de l'Immobilier", sector: "Immobilier", period: "Annuel · Parc Chanot" },
       { name: "Top Transport Europe", sector: "Logistique & supply chain", period: "Biennal · Parc Chanot" },
       { name: "Foire Internationale de Marseille", sector: "Grand public B2C", period: "Septembre-octobre · Parc Chanot" },
       { name: "Salon Nautique de Marseille", sector: "Plaisance & maritime", period: "Annuel · Vieux Port" },
@@ -167,17 +167,17 @@ export const cities: Record<string, CityData> = {
     name: "Lille",
     region: "Hauts-de-France",
     title:
-      "Stand & design d'espaces Lille — Lille Grand Palais, Lille Eurexpo | Novaus",
+      "Stand & design d'espaces Lille, Lille Grand Palais, Lille Eurexpo | Novaus",
     description:
       "Agence de design de stands à Lille : conception sur-mesure, modulaire et événementielle pour Lille Grand Palais et Lille Eurexpo. Salons CFIA, Producteurs des Hauts-de-France.",
     intro:
-      "Lille est le carrefour économique du nord de l'Europe. À 1 h de Paris, 35 min de Bruxelles, 1 h 20 de Londres — la ville est devenue un hub stratégique pour les salons B2B agroalimentaires, industriels et logistiques.",
+      "Lille est le carrefour économique du nord de l'Europe. À 1 h de Paris, 35 min de Bruxelles, 1 h 20 de Londres, la ville est devenue un hub stratégique pour les salons B2B agroalimentaires, industriels et logistiques.",
     hook:
-      "À Lille, l'efficacité prime — votre stand doit transformer en quelques pas.",
+      "À Lille, l'efficacité prime, votre stand doit transformer en quelques pas.",
     venues: [
       {
         name: "Lille Grand Palais",
-        desc: "20 000 m² au cœur de la ville — CFIA Hauts-de-France, Salon des Maires, Producteurs Locaux.",
+        desc: "20 000 m² au cœur de la ville, CFIA Hauts-de-France, Salon des Maires, Producteurs Locaux.",
       },
       {
         name: "Lille Eurexpo (Tourcoing)",
@@ -213,21 +213,21 @@ export const cities: Record<string, CityData> = {
     name: "Rennes",
     region: "Bretagne",
     title:
-      "Stand sur-mesure Rennes — Parc Expo Rennes Aéroport, salons bretons | Novaus",
+      "Stand sur-mesure Rennes, Parc Expo Rennes Aéroport, salons bretons | Novaus",
     description:
       "Agence de design d'espaces à Rennes : stands sur-mesure, modulaires et pop-up pour le Parc Expo Rennes Aéroport. SPACE, CFIA, Salon Régional de l'Habitat.",
     intro:
-      "Rennes est la capitale agricole et agroalimentaire de l'Ouest. Le Parc Expo Rennes Aéroport accueille des salons de référence — SPACE, CFIA — qui concentrent les filières élevage, productions végétales et IAA. Une scène stratégique pour qui vise le marché ouest-européen.",
+      "Rennes est la capitale agricole et agroalimentaire de l'Ouest. Le Parc Expo Rennes Aéroport accueille des salons de référence, SPACE, CFIA, qui concentrent les filières élevage, productions végétales et IAA. Une scène stratégique pour qui vise le marché ouest-européen.",
     hook:
-      "À Rennes, on parle aux décideurs filière — pas aux curieux.",
+      "À Rennes, on parle aux décideurs filière, pas aux curieux.",
     venues: [
       {
         name: "Parc Expo Rennes Aéroport",
-        desc: "60 000 m² — SPACE, CFIA Rennes, Salon Régional de l'Habitat, Salon de l'Agriculture Ouest.",
+        desc: "60 000 m², SPACE, CFIA Rennes, Salon Régional de l'Habitat, Salon de l'Agriculture Ouest.",
       },
       {
         name: "Le Couvent des Jacobins",
-        desc: "Centre des congrès de Rennes Métropole — conventions corporate et lancements régionaux.",
+        desc: "Centre des congrès de Rennes Métropole, conventions corporate et lancements régionaux.",
       },
       {
         name: "Les Champs Libres",

@@ -276,7 +276,7 @@ export default function CityPage({ city }: { city: CityData }) {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "ProfessionalService",
-            name: `Novaus — Agence de stand ${city.name}`,
+            name: `Novaus, Agence de stand ${city.name}`,
             description: city.description,
             url: `https://novaus.fr/${city.slug}/`,
             areaServed: { "@type": "City", name: city.name },

@@ -19,7 +19,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL("https://novaus.fr"),
   title: {
-    default: "Novaus — Agence de design d'espaces événementiels & stands sur-mesure",
+    default: "Novaus, Agence de design d'espaces événementiels & stands sur-mesure",
     template: "%s | Novaus",
   },
   description:
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Novaus" }],
   openGraph: {
-    title: "Novaus — Le design comme trajectoire",
+    title: "Novaus, Le design comme trajectoire",
     description:
       "Agence de design d'espaces événementiels. Stands, showrooms, pop-up et roadshows en France et à l'international.",
     url: "https://novaus.fr",

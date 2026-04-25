@@ -26,7 +26,7 @@ export default function Hero() {
       {/* Hero content */}
       <div className="relative z-10 max-w-8xl mx-auto px-6 lg:px-12 pb-24 lg:pb-32 w-full">
         <div className="max-w-5xl">
-          <h1 className="font-display font-light text-[clamp(2.5rem,7vw,6.5rem)] leading-[1.02] tracking-tight text-cream">
+          <h1 className="font-display font-light text-[clamp(2rem,5vw,4.5rem)] leading-[1.05] tracking-tight text-cream">
             Le design <em className="text-gold not-italic font-normal">comme trajectoire,</em>
             <br />
             l'expérience <em className="text-gold not-italic font-normal">comme destination.</em>
@@ -34,7 +34,7 @@ export default function Hero() {
 
           <div className="mt-12 flex flex-col sm:flex-row sm:items-end gap-8 sm:gap-16">
             <p className="text-cream/70 text-base lg:text-lg max-w-md leading-relaxed font-light">
-              Nous concevons des espaces qui ne se visitent pas — qui se vivent.
+              Nous concevons des espaces qui ne se visitent pas, qui se vivent.
               Stands, showrooms, pop-up, roadshows. En France et partout où vos
               marques ont besoin d'exister.
             </p>
@@ -50,7 +50,7 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Stats footer */}
+        {/* Stats footer (centered horizontally inside each cell) */}
         <div className="mt-20 lg:mt-32 grid grid-cols-2 md:grid-cols-4 gap-8 pt-10 border-t border-cream/10">
           {[
             { n: "15+", l: "années d'expérience" },
@@ -58,11 +58,11 @@ export default function Hero() {
             { n: "30+", l: "designers freelance" },
             { n: "5", l: "typologies d'espaces maîtrisées" },
           ].map((s) => (
-            <div key={s.l}>
+            <div key={s.l} className="flex flex-col items-center text-center">
               <p className="font-display text-3xl lg:text-4xl text-gold font-light">
                 {s.n}
               </p>
-              <p className="mt-2 text-[11px] uppercase tracking-extra-wide text-cream/50">
+              <p className="mt-2 text-[11px] uppercase tracking-extra-wide text-cream/50 max-w-[14ch]">
                 {s.l}
               </p>
             </div>
