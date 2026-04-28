@@ -8,34 +8,34 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Inspired by Novaus brand palette from pitch deck
+        // Novaus palette — updated by client
         ink: {
-          DEFAULT: "#0A0A0A",
-          deep: "#050505",
-          soft: "#141414",
+          DEFAULT: "#000000",
+          deep: "#000000",
+          soft: "#111111",
         },
         cream: {
-          DEFAULT: "#EFEAE0",
-          warm: "#E8E1D3",
-          pale: "#F5F1E8",
+          DEFAULT: "#E4E2DD",
+          warm: "#D0CCC5",
+          pale: "#EDEBE8",
         },
         gold: {
-          DEFAULT: "#C9A14B",
-          light: "#D9B765",
-          dark: "#8E6F2F",
+          DEFAULT: "#B7937B",
+          light: "#C9A891",
+          dark: "#9A7863",
         },
         bronze: {
-          DEFAULT: "#A8714F",
-          light: "#C28C68",
-          dark: "#7D553B",
+          DEFAULT: "#B7937B",
+          light: "#C9A891",
+          dark: "#9A7863",
         },
-        sand: "#B89B7A",
-        ash: "#6B6B6B",
-        line: "#1F1F1F",
+        sand: "#BCB3A3",
+        ash: "#807B6D",
+        line: "#1E1E1E",
       },
       fontFamily: {
-        display: ["var(--font-fraunces)", "Georgia", "serif"],
-        sans: ["var(--font-inter)", "system-ui", "sans-serif"],
+        display: ["var(--font-syne)", "system-ui", "sans-serif"],
+        sans: ["var(--font-bricolage)", "system-ui", "sans-serif"],
       },
       letterSpacing: {
         widest: "0.3em",

@@ -1,17 +1,26 @@
 import type { Metadata } from "next";
-import { Fraunces, Inter } from "next/font/google";
+import { Syne, Bricolage_Grotesque } from "next/font/google";
 import "./globals.css";
 
-const fraunces = Fraunces({
+/**
+ * Title / heading font: Syne — geometric grotesque, bold editorial feel.
+ * Closest freely available substitute for Cy Grotesk Key (premium paid font).
+ * Use font-display + font-bold (700) for titles, font-medium (500) for subtitles.
+ */
+const syne = Syne({
   subsets: ["latin"],
-  variable: "--font-fraunces",
+  variable: "--font-syne",
   display: "swap",
-  weight: ["300", "400", "500", "600", "700"],
+  weight: ["400", "500", "600", "700", "800"],
 });
 
-const inter = Inter({
+/**
+ * Body font: Bricolage Grotesque — as requested by client.
+ * Humanist grotesque, excellent readability, available on Google Fonts.
+ */
+const bricolage = Bricolage_Grotesque({
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-bricolage",
   display: "swap",
   weight: ["300", "400", "500", "600"],
 });
@@ -63,7 +72,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="fr" className={`${fraunces.variable} ${inter.variable}`}>
+    <html lang="fr" className={`${syne.variable} ${bricolage.variable}`}>
       <body className="bg-ink text-cream font-sans antialiased">
         {children}
       </body>
