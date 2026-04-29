@@ -63,26 +63,46 @@ export default function Approach() {
           </div>
         </div>
 
-        {/* Process timeline */}
+        {/* Process timeline — editorial card flow with connecting line */}
         <div className="relative">
-          <div className="absolute top-3 left-0 right-0 h-px bg-line hidden lg:block" />
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-6">
-            {steps.map((s) => (
-              <div key={s.num} className="relative">
-                <div className="flex items-center gap-4 lg:block">
-                  <div className="w-6 h-6 rounded-full border border-gold bg-ink flex items-center justify-center shrink-0">
-                    <div className="w-1.5 h-1.5 rounded-full bg-gold" />
-                  </div>
-                  <p className="lg:mt-8 text-[10px] uppercase tracking-widest text-cream/40">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-px bg-line">
+            {steps.map((s, i) => (
+              <div
+                key={s.num}
+                className="group relative bg-ink p-8 lg:p-10 hover:bg-ink-soft transition-colors flex flex-col"
+              >
+                {/* Big background number */}
+                <p className="font-display text-7xl lg:text-8xl text-cream/[0.06] group-hover:text-gold/20 font-light leading-none transition-colors select-none">
+                  {s.num}
+                </p>
+
+                {/* Eyebrow with gold dot */}
+                <div className="mt-6 flex items-center gap-3">
+                  <span className="w-1.5 h-1.5 rounded-full bg-gold" />
+                  <p className="text-[10px] uppercase tracking-widest text-gold">
                     Étape {s.num}
                   </p>
                 </div>
-                <h4 className="mt-4 lg:mt-3 font-display text-2xl text-cream font-light">
+
+                {/* Title */}
+                <h4 className="mt-3 font-display text-2xl text-cream font-light leading-tight">
                   {s.label}
                 </h4>
-                <p className="mt-3 text-sm text-cream/60 leading-relaxed">
+
+                {/* Description */}
+                <p className="mt-4 text-sm text-cream/60 leading-relaxed flex-grow">
                   {s.sub}
                 </p>
+
+                {/* Arrow connector to next step (desktop only, not on last) */}
+                {i < steps.length - 1 && (
+                  <span
+                    aria-hidden
+                    className="hidden lg:flex absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 z-10 w-7 h-7 rounded-full bg-ink border border-line items-center justify-center text-cream/40 group-hover:text-gold group-hover:border-gold/50 transition-colors"
+                  >
+                    →
+                  </span>
+                )}
               </div>
             ))}
           </div>

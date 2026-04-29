@@ -35,8 +35,8 @@ export default function Story() {
               internationales au sein d'agences de référence.
             </p>
 
-            {/* Signature stat */}
-            <div className="pt-6 border-t border-ink/15">
+            {/* Signature stat — centered horizontally */}
+            <div className="pt-6 border-t border-ink/15 flex flex-col items-center text-center">
               <p className="font-display text-5xl lg:text-6xl text-bronze font-light">
                 15<span className="text-3xl lg:text-4xl">+</span>
               </p>
