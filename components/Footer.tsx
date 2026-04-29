@@ -3,6 +3,7 @@ import Link from "next/link";
 const cities = [
   { slug: "paris", label: "Paris" },
   { slug: "lyon", label: "Lyon" },
+  { slug: "cannes", label: "Cannes" },
   { slug: "marseille", label: "Marseille" },
   { slug: "lille", label: "Lille" },
   { slug: "rennes", label: "Rennes" },

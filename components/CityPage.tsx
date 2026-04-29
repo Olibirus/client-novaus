@@ -1,11 +1,13 @@
 import Link from "next/link";
 import Nav from "./Nav";
 import Footer from "./Footer";
+import FairsTable from "./FairsTable";
 import type { CityData } from "@/lib/cities";
 import { cities } from "@/lib/cities";
 
 export default function CityPage({ city }: { city: CityData }) {
   const otherCities = Object.values(cities).filter((c) => c.slug !== city.slug);
+  const totalEvents = city.featuredFairs.length + city.allFairs.length;
 
   return (
     <main className="relative bg-ink text-cream">
@@ -103,14 +105,14 @@ export default function CityPage({ city }: { city: CityData }) {
         </div>
       </section>
 
-      {/* Fairs */}
+      {/* Featured fairs grid */}
       <section className="bg-ink py-24 lg:py-32 border-b border-line">
         <div className="max-w-8xl mx-auto px-6 lg:px-12">
           <div className="grid grid-cols-12 gap-6 mb-16">
             <div className="col-span-12 lg:col-span-3">
               <span className="section-num text-2xl">02</span>
               <p className="mt-3 text-[10px] uppercase tracking-widest text-cream/40">
-                Salons couverts
+                Salons phares à {city.name}
               </p>
             </div>
             <div className="col-span-12 lg:col-span-9">
@@ -118,34 +120,69 @@ export default function CityPage({ city }: { city: CityData }) {
                 Les rendez-vous <em className="text-gold not-italic">incontournables</em><br />
                 de {city.name}.
               </h2>
+              <p className="mt-6 max-w-2xl text-cream/60 text-base leading-relaxed">
+                Une sélection des salons et congrès les plus stratégiques où Novaus accompagne déjà des marques exposantes.
+              </p>
             </div>
           </div>
 
-          <ul className="divide-y divide-line border-y border-line">
-            {city.fairs.map((f, i) => (
-              <li
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-line">
+            {city.featuredFairs.map((f, i) => (
+              <article
                 key={f.name}
-                className="grid grid-cols-12 gap-4 py-6 px-2 hover:bg-ink-soft/40 transition-colors"
+                className="bg-ink p-8 lg:p-9 hover:bg-ink-soft transition-colors flex flex-col min-h-[240px]"
               >
-                <div className="col-span-2 lg:col-span-1">
+                <div className="flex items-start justify-between mb-6">
                   <span className="section-num text-sm">
                     {String(i + 1).padStart(2, "0")}
                   </span>
+                  {f.year && (
+                    <span className="text-xs text-bronze tracking-wider">
+                      {f.year}
+                    </span>
+                  )}
                 </div>
-                <div className="col-span-10 lg:col-span-5">
-                  <h4 className="font-display text-xl lg:text-2xl text-cream font-light">
-                    {f.name}
-                  </h4>
+                <h3 className="font-display text-xl lg:text-2xl text-cream font-light leading-snug flex-grow">
+                  {f.name}
+                </h3>
+                <div className="mt-5 pt-4 border-t border-line/60">
+                  <p className="text-xs text-cream/60 leading-relaxed">
+                    {f.sector}
+                  </p>
+                  {f.venue && (
+                    <p className="mt-1.5 text-[10px] uppercase tracking-widest text-cream/30">
+                      {f.venue}
+                    </p>
+                  )}
                 </div>
-                <div className="col-span-6 lg:col-span-3">
-                  <p className="text-sm text-cream/60">{f.sector}</p>
-                </div>
-                <div className="col-span-6 lg:col-span-3 text-right">
-                  <p className="text-sm text-bronze">{f.period}</p>
-                </div>
-              </li>
+              </article>
             ))}
-          </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* Full fairs table (expandable) */}
+      <section className="bg-ink py-24 lg:py-32 border-b border-line">
+        <div className="max-w-8xl mx-auto px-6 lg:px-12">
+          <div className="grid grid-cols-12 gap-6 mb-16">
+            <div className="col-span-12 lg:col-span-3">
+              <span className="section-num text-2xl">03</span>
+              <p className="mt-3 text-[10px] uppercase tracking-widest text-cream/40">
+                Agenda complet
+              </p>
+            </div>
+            <div className="col-span-12 lg:col-span-9">
+              <h2 className="font-display font-light text-[clamp(2rem,4vw,3.5rem)] leading-tight">
+                Tous les salons & congrès<br />
+                <em className="text-gold not-italic">de {city.name}.</em>
+              </h2>
+              <p className="mt-6 max-w-2xl text-cream/60 text-base leading-relaxed">
+                {totalEvents}+ événements professionnels et grand public couverts par notre équipe à {city.name}. Dates à confirmer selon les éditions.
+              </p>
+            </div>
+          </div>
+
+          <FairsTable fairs={city.allFairs} cityName={city.name} />
         </div>
       </section>
 
@@ -154,7 +191,7 @@ export default function CityPage({ city }: { city: CityData }) {
         <div className="max-w-8xl mx-auto px-6 lg:px-12">
           <div className="grid grid-cols-12 gap-6 lg:gap-12">
             <div className="col-span-12 lg:col-span-5">
-              <span className="section-num text-2xl text-bronze">03</span>
+              <span className="section-num text-2xl text-bronze">04</span>
               <p className="mt-3 text-[10px] uppercase tracking-widest text-ink/50">
                 Secteurs d'expertise à {city.name}
               </p>
@@ -175,7 +212,7 @@ export default function CityPage({ city }: { city: CityData }) {
             </div>
 
             <div className="col-span-12 lg:col-span-6 lg:col-start-7">
-              <span className="section-num text-2xl text-bronze">04</span>
+              <span className="section-num text-2xl text-bronze">05</span>
               <p className="mt-3 text-[10px] uppercase tracking-widest text-ink/50">
                 Logistique locale
               </p>
@@ -248,7 +285,7 @@ export default function CityPage({ city }: { city: CityData }) {
           <p className="text-[10px] uppercase tracking-widest text-cream/40 mb-8">
             Nous intervenons aussi à
           </p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
             {otherCities.map((c) => (
               <Link
                 key={c.slug}
